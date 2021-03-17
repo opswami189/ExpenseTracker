@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ExpenseTracker.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>This is Site1.Master</title>
+
+</head>
+<form id="form1" runat="server" style=" padding: inherit; text-align: center">
+    <div style=" border: thin solid #0000FF; text-align: center; display: inherit; padding-left: 0cm; padding-right: 0cm; margin-left: 5.2cm; margin-right: 5.2cm; left: 0cm;">
+    &nbsp;<body><asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="XX-Large" ForeColor="Blue" Text="Expense Tracker" Font-Names="Calibri"></asp:Label>
+        <br />
+        <asp:Label ID="LblUserName" runat="server" Font-Size="Large" ForeColor="#00CC00"></asp:Label>
+        <br />
+        
+            &nbsp;&nbsp;
+            <asp:Button ID="BtnSignIn" runat="server" BackColor="#0033CC" BorderColor="#0033CC" BorderStyle="Solid" BorderWidth="4px" Font-Bold="False" Font-Names="Times New Roman" Font-Size="Small" ForeColor="White" Text="SignIn" />
+&nbsp;&nbsp;<asp:LinkButton ID="LbViewPayments" runat="server" PostBackUrl="~/ViewPayments.aspx" BorderColor="#0033CC" BorderStyle="Solid" BackColor="#0033CC" Font-Size="Medium" Font-Underline="False" ForeColor="White">View Payments</asp:LinkButton>
+
+            &nbsp;<asp:LinkButton ID="LbAddExpense" runat="server" OnClick="LinkButton1_Click" PostBackUrl="~/AddExpense.aspx" BorderColor="#0033CC" BorderStyle="Solid" BackColor="#0033CC" Font-Underline="False" ForeColor="White">Add Expense</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LbAddCategory" runat="server" PostBackUrl="~/AddCategory.aspx" BorderColor="#0033CC" BorderStyle="Solid" BackColor="#0033CC" Font-Underline="False" ForeColor="White">Add Category</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LbAddBeneficiary" runat="server" PostBackUrl="~/AddBeneficiary.aspx" BorderColor="#0033CC" BorderStyle="Solid" BackColor="#0033CC" Font-Underline="False" ForeColor="White">Add Beneficiary</asp:LinkButton>
+
+            &nbsp;<asp:LinkButton ID="LbAddPaymentMode" runat="server" PostBackUrl="~/AddPaymentMode.aspx" BorderColor="#0033CC" BorderStyle="Solid" BackColor="#0033CC" Font-Underline="False" ForeColor="White">Add PaymentMode</asp:LinkButton>
+
+            &nbsp;
+            <asp:Button ID="BtnLogout" runat="server" BorderColor="#0033CC" BorderWidth="4px" ForeColor="White" OnClick="BtnLogout_Click" Text="LogOut" BackColor="#0033CC" BorderStyle="Solid" Font-Names="Times New Roman" Font-Size="Small" />
+        </div>
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder1" runat="server">
+            <h1 style="text-align: center">you can change Content here</h1>
+            <p style="text-align: center">&nbsp;</p>
+        </asp:ContentPlaceHolder>
+</form>
+    <p style="text-align: center">
+        &nbsp;</p>
+</body>
+</html>
+
