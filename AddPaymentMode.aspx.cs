@@ -14,7 +14,7 @@ namespace ExpenseTracker
         {
             if (Session["Id"] == null)
             {
-                Response.Redirect("SignIn.aspx", false);
+                Response.Redirect("Login.aspx", false);
             }
         }
 
@@ -23,21 +23,26 @@ namespace ExpenseTracker
             using (var ctx = new PaymentContext())
             {
                 var mode = new PaymentMode() { Mode = TxtMode.Text };
-                if(TxtMode.Text=="")
+                if(TxtMode.Text !="" && TxtMode.Text!=" ")
                 {
-                    LblRedirect.Text = "* Mode can not be empty!";
+                    if (ctx.PaymentModes.Any(x => x.Mode == TxtMode.Text))
+                    {
+                        LblMessage.ForeColor = System.Drawing.Color.Red;
+                        LblMessage.Text = "* Payment mode already exists!";
+                    }
+                    else
+                    {
+                        ctx.PaymentModes.Add(mode);
+                        ctx.SaveChanges();
+                        LblMessage.ForeColor = System.Drawing.Color.Green;
+                        LblMessage.Text = "Payment mode Added";
+                    }
                 }
-                else if(ctx.PaymentModes.Any(x=>x.Mode==TxtMode.Text))
-                {
-                    LblRedirect.Text = "* Payment mode already exists!";
-                }
-                
                 else
                 {
-                    ctx.PaymentModes.Add(mode);
-                    ctx.SaveChanges();
+                    LblMessage.ForeColor = System.Drawing.Color.Red;
+                    LblMessage.Text = "* Mode can not be empty!";
                 }
-                
             }
             GridViewModes.DataBind();
             TxtMode.Text = null;

@@ -5,16 +5,18 @@
         <br />
         </p>
     <p>
-        <asp:Label ID="LblName" runat="server" Text="Name:" ForeColor="#CC3300"></asp:Label>
+        <asp:Label ID="LblName" runat="server" Text="Category name:" ForeColor="Blue"></asp:Label>
 &nbsp;&nbsp;
         <asp:TextBox ID="TxtCategoryType" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="LblRedirect" runat="server" ForeColor="Red"></asp:Label>
+        <asp:Label ID="LblMessage" runat="server" ForeColor="Red"></asp:Label>
+    </p>
+    <p style="margin-left: 40px">
+        <asp:Button ID="BtnAdd" runat="server" OnClick="BtnCategory_Click" Text="Add " BorderColor="#000099" BorderStyle="Solid" Font-Size="Medium" ForeColor="White" BackColor="#000099" />
     </p>
     <p>
-        <asp:Button ID="BtnCategory" runat="server" OnClick="BtnCategory_Click" Text="Save" BorderColor="#CC3300" BorderStyle="Solid" Font-Size="Medium" ForeColor="#CC3300" />
-    </p>
+        &nbsp;</p>
     <p>
         <asp:GridView ID="GridViewCategories" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" HorizontalAlign="Center">
             <Columns>

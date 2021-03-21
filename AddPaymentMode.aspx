@@ -5,14 +5,14 @@
         <br />
         </p>
     <p>
-        <asp:Label ID="LblMode" runat="server" Text="Mode:" ForeColor="#CC3300"></asp:Label>
+        <asp:Label ID="LblMode" runat="server" Text="Mode:" ForeColor="Blue"></asp:Label>
 &nbsp;<asp:TextBox ID="TxtMode" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="LblRedirect" runat="server" ForeColor="Red"></asp:Label>
+        <asp:Label ID="LblMessage" runat="server" ForeColor="Red"></asp:Label>
     </p>
     <p>
-        <asp:Button ID="BtnSave" runat="server" OnClick="BtnSave_Click" Text="Save" BorderColor="#CC3300" BorderStyle="Solid" Font-Size="Medium" ForeColor="#CC3300" />
+        <asp:Button ID="BtnAdd" runat="server" OnClick="BtnSave_Click" Text="Add" BorderColor="#000099" BorderStyle="Solid" Font-Size="Medium" ForeColor="White" BackColor="#000099" />
     </p>
     <p>
         <asp:GridView ID="GridViewModes" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSourceModes" HorizontalAlign="Center">

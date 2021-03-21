@@ -14,7 +14,7 @@ namespace ExpenseTracker
         {
             if (Session["Id"] == null)
             {
-                Response.Redirect("SignIn.aspx", false);
+                Response.Redirect("login.aspx", false);
             }
             if (!IsPostBack)
             {
@@ -28,21 +28,25 @@ namespace ExpenseTracker
             {
                 var pmt = new Beneficiary() { Name = TxtName.Text, MobileNo = TxtMobileNo.Text };
 
-                if (TxtName.Text == "")
-                {
-                    LblRedirect.Text = "* Name can not be empty!";
-                }
-                else
+                if (TxtName.Text != "" && TxtName.Text != " ")
                 {
                     if (ctx.Beneficiaries.Any(x => (x.Name == TxtName.Text)))
                     {
-                        LblRedirect.Text = "* Beneficiary already exists!";
+                        LblMessage.ForeColor = System.Drawing.Color.Red;
+                        LblMessage.Text = "* Beneficiary already exists!";
                     }
                     else
                     {
                         ctx.Beneficiaries.Add(pmt);
                         ctx.SaveChanges();
+                        LblMessage.ForeColor = System.Drawing.Color.Green;
+                        LblMessage.Text = "Beneficiary Added";
                     }
+                }
+                else
+                {
+                    LblMessage.ForeColor = System.Drawing.Color.Red;
+                    LblMessage.Text = "* Name can not be empty!";
                 }
             }
             GridViewBeneficiaries.DataBind();

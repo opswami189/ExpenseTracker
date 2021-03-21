@@ -14,7 +14,7 @@ namespace ExpenseTracker
         {
             if (Session["Id"] == null)
             {
-                Response.Redirect("SignIn.aspx", false);
+                Response.Redirect("Login.aspx", false);
             }
         }
 

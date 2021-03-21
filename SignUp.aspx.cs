@@ -20,18 +20,18 @@ namespace ExpenseTracker
             using (var ctx = new PaymentContext())
             {
                 var user = new UserProfile() { FirstName = TxtFirstName.Text, LastName = TxtLastName.Text, EmailId = TxtEmail.Text, Password = TxtPassword.Text, MobileNo = TxtMobileNo.Text };
-                if(TxtFirstName.Text!=""|| TxtEmail.Text!=""|| TxtPassword.Text!="")
+                if(TxtFirstName.Text!=""&& TxtEmail.Text!=""&& TxtPassword.Text!="")
                 {
                     ctx.userProfiles.Add(user);
                     ctx.SaveChanges();
                 }
                 else
                 {
-                    LblEnterDetails.Text = "* First Name, Email Id and Password can't be empty";
+                    LblError.Text = "* First Name, Email Id and Password can't be empty";
                 }
                 
             }
-            if (TxtFirstName.Text != "" || TxtEmail.Text != "" || TxtPassword.Text != "")
+            if (TxtFirstName.Text != "" && TxtEmail.Text != "" && TxtPassword.Text != "")
             {
                 TxtFirstName.Text = null;
                 TxtLastName.Text = null;
@@ -40,7 +40,7 @@ namespace ExpenseTracker
                 TxtMobileNo.Text = null;
                 LblFeedback.Text = "Your account has been created!";
                 LblRedirect.Text = "Redirecting to LogIn page.....";
-                Response.AppendHeader("Refresh", "5;url=SignIn.aspx");
+                Response.AppendHeader("Refresh", "5;url=Login.aspx");
             }
              
 

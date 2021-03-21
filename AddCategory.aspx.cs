@@ -14,7 +14,7 @@ namespace ExpenseTracker
         {
             if (Session["Id"] == null)
             {
-                Response.Redirect("SignIn.aspx", false);
+                Response.Redirect("Login.aspx", false);
             }
         }
 
@@ -23,22 +23,26 @@ namespace ExpenseTracker
             using (var ctx = new PaymentContext())
             {
                 var category = new Category() { CategoryType = TxtCategoryType.Text };
-               
-                if (TxtCategoryType.Text == "")
+
+                if (TxtCategoryType.Text != "" && TxtCategoryType.Text != " ")
                 {
-                    LblRedirect.Text = "* Category name can not be empty!";
-                }
-                else
-                {
-                    if(ctx.Categories.Any(x=>x.CategoryType==TxtCategoryType.Text))
+                    if (ctx.Categories.Any(x => x.CategoryType == TxtCategoryType.Text))
                     {
-                        LblRedirect.Text="* Category already exists!";
+                        LblMessage.ForeColor = System.Drawing.Color.Red;
+                        LblMessage.Text = "* Category already exists!";
                     }
                     else
                     {
                         ctx.Categories.Add(category);
                         ctx.SaveChanges();
+                        LblMessage.ForeColor = System.Drawing.Color.Green;
+                        LblMessage.Text = "Category Added";
                     }
+                }
+                else
+                {
+                    LblMessage.ForeColor = System.Drawing.Color.Red;
+                    LblMessage.Text = "* Category name can not be empty!";
                 }
             }
             GridViewCategories.DataBind();

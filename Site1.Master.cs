@@ -32,7 +32,7 @@ namespace ExpenseTracker
         protected void BtnLogout_Click(object sender, EventArgs e)
         {
             Session.Abandon();
-            Response.Redirect("SignIn.aspx", false);
+            Response.Redirect("Login.aspx", false);
             
         }
 

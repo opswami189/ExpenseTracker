@@ -14,10 +14,10 @@
         <asp:TextBox ID="TxtMobileNo" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Size="Medium"></asp:TextBox>
     </p>
     <p>
-        <asp:Label ID="LblRedirect" runat="server" ForeColor="Red"></asp:Label>
+        <asp:Label ID="LblMessage" runat="server" ForeColor="Red"></asp:Label>
     </p>
     <p>
-        <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" BorderColor="#0033CC" BorderStyle="Solid" Font-Size="Medium" ForeColor="White" BackColor="#0033CC" />
+        <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" BorderColor="#000099" BorderStyle="Solid" Font-Size="Medium" ForeColor="White" BackColor="#000099" />
     </p>
     <p>
         &nbsp;</p>

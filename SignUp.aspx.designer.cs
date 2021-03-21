@@ -132,22 +132,22 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.TextBox TxtMobileNo;
 
         /// <summary>
-        /// LblEnterDetails control.
+        /// LblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblEnterDetails;
+        protected global::System.Web.UI.WebControls.Label LblError;
 
         /// <summary>
-        /// BtnSave control.
+        /// BtnSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSave;
+        protected global::System.Web.UI.WebControls.Button BtnSignUp;
 
         /// <summary>
         /// LblSignIn control.
@@ -159,13 +159,13 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblSignIn;
 
         /// <summary>
-        /// LbSignIn control.
+        /// LbLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LbSignIn;
+        protected global::System.Web.UI.WebControls.LinkButton LbLogin;
 
         /// <summary>
         /// LblFeedback control.
