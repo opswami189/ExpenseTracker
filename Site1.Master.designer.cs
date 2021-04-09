@@ -42,13 +42,13 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblUserName;
 
         /// <summary>
-        /// BtnSignIn control.
+        /// LbDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSignIn;
+        protected global::System.Web.UI.WebControls.LinkButton LbDashboard;
 
         /// <summary>
         /// LbViewPayments control.
@@ -69,31 +69,31 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.LinkButton LbAddExpense;
 
         /// <summary>
-        /// LbAddCategory control.
+        /// LbMngCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LbAddCategory;
+        protected global::System.Web.UI.WebControls.LinkButton LbMngCategory;
 
         /// <summary>
-        /// LbAddBeneficiary control.
+        /// LbMngBeneficiary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LbAddBeneficiary;
+        protected global::System.Web.UI.WebControls.LinkButton LbMngBeneficiary;
 
         /// <summary>
-        /// LbAddPaymentMode control.
+        /// LbMngPaymentMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LbAddPaymentMode;
+        protected global::System.Web.UI.WebControls.LinkButton LbMngPaymentMode;
 
         /// <summary>
         /// BtnLogout control.

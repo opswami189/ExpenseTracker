@@ -1,10 +1,7 @@
-﻿using ExpenseTracker.NewFolder1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ExpenseTracker
 {
@@ -12,28 +9,15 @@ namespace ExpenseTracker
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Id"] != null)
+            if(HttpContext.Current.Request.IsAuthenticated)
             {
-                LblUserName.Text = "Welcome" + " " + Session["name"] + " " + "!";
-                BtnSignIn.Visible = false;
+                LblUserName.Text = "Welcome" + " " + HttpContext.Current.User.Identity.Name + " " + "!";
             }
         }
-
-        protected void LinkManageExpense_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void BtnLogout_Click(object sender, EventArgs e)
         {
-            Session.Abandon();
-            Response.Redirect("Login.aspx", false);
-            
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
         }
 
     }

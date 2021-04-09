@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace ExpenseTracker.NewFolder1
 {
     public class PaymentContext : DbContext
     {
-        public PaymentContext() : base("Data Source=.;Initial Catalog=ExpenseTracker;Integrated Security=True")
+        public PaymentContext() : base("ExpenseTrackerConnectionString")
         {
             Database.SetInitializer<PaymentContext>(null);
         }

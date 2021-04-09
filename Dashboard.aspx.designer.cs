@@ -11,250 +11,196 @@ namespace ExpenseTracker
 {
 
 
-    public partial class AddExpense
+    public partial class Dashboard
     {
 
         /// <summary>
-        /// LblAddExpense control.
+        /// LblCurrentMExpense control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAddExpense;
+        protected global::System.Web.UI.WebControls.Label LblCurrentMExpense;
 
         /// <summary>
-        /// LblDate control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDate;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// ReqValDate control.
+        /// ChartCMC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValDate;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartCMC;
 
         /// <summary>
-        /// TxtDate control.
+        /// ChartCMD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDate;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartCMD;
 
         /// <summary>
-        /// LblAmount control.
+        /// CurrentMonthData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAmount;
+        protected global::System.Web.UI.WebControls.SqlDataSource CurrentMonthData;
 
         /// <summary>
-        /// ReqValAmount control.
+        /// CurrentMonthCredit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValAmount;
+        protected global::System.Web.UI.WebControls.SqlDataSource CurrentMonthCredit;
 
         /// <summary>
-        /// TxtAmount control.
+        /// CurrentMonthDebit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtAmount;
+        protected global::System.Web.UI.WebControls.SqlDataSource CurrentMonthDebit;
 
         /// <summary>
-        /// RangeValidator1 control.
+        /// LblPrevMonthExps control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        protected global::System.Web.UI.WebControls.Label LblPrevMonthExps;
 
         /// <summary>
-        /// LblCategory control.
+        /// GridView4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCategory;
+        protected global::System.Web.UI.WebControls.GridView GridView4;
 
         /// <summary>
-        /// ReqValCategory control.
+        /// ChartPMC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValCategory;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartPMC;
 
         /// <summary>
-        /// DropDownCategory control.
+        /// ChartPMD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownCategory;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartPMD;
 
         /// <summary>
-        /// SqlDataSourceCategory control.
+        /// PreviousMonthData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceCategory;
+        protected global::System.Web.UI.WebControls.SqlDataSource PreviousMonthData;
 
         /// <summary>
-        /// LblCheckBox control.
+        /// PreviousMonthCredit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCheckBox;
+        protected global::System.Web.UI.WebControls.SqlDataSource PreviousMonthCredit;
 
         /// <summary>
-        /// CheckBoxIsCredit control.
+        /// PreviousMonthDebit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxIsCredit;
+        protected global::System.Web.UI.WebControls.SqlDataSource PreviousMonthDebit;
 
         /// <summary>
-        /// LblBeneficiary control.
+        /// LblCurYearExpenses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblBeneficiary;
+        protected global::System.Web.UI.WebControls.Label LblCurYearExpenses;
 
         /// <summary>
-        /// DropDownBeneficiary control.
+        /// GridView5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownBeneficiary;
+        protected global::System.Web.UI.WebControls.GridView GridView5;
 
         /// <summary>
-        /// SqlDataSourceBeneficiary control.
+        /// ChartCYC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceBeneficiary;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartCYC;
 
         /// <summary>
-        /// LblMode control.
+        /// ChartCYD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMode;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart ChartCYD;
 
         /// <summary>
-        /// ReqValMode control.
+        /// CurrentYearData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValMode;
+        protected global::System.Web.UI.WebControls.SqlDataSource CurrentYearData;
 
         /// <summary>
-        /// DropDownMode control.
+        /// CurrentYearCredit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownMode;
+        protected global::System.Web.UI.WebControls.SqlDataSource CurrentYearCredit;
 
         /// <summary>
-        /// SqlDataSourceMode control.
+        /// CurrentYearDebit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceMode;
-
-        /// <summary>
-        /// LblDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblDetails;
-
-        /// <summary>
-        /// TxtDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDetails;
-
-        /// <summary>
-        /// LblError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblError;
-
-        /// <summary>
-        /// ValSummaryAddExpense control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValSummaryAddExpense;
-
-        /// <summary>
-        /// BtnAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnAdd;
-
-        /// <summary>
-        /// LblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMessage;
+        protected global::System.Web.UI.WebControls.SqlDataSource CurrentYearDebit;
     }
 }

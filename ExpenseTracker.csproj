@@ -51,6 +51,7 @@
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -74,23 +75,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddBeneficiary.aspx" />
+    <Content Include="ManageBeneficiary.aspx" />
     <Content Include="AddExpense.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="index.png" />
     <Content Include="Login.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="ViewPayments.aspx" />
     <Content Include="Web.config" />
-    <Content Include="AddCategory.aspx" />
-    <Content Include="AddPaymentMode.aspx" />
+    <Content Include="ManageCategory.aspx" />
+    <Content Include="ManagePaymentMode.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBeneficiary.aspx.cs">
-      <DependentUpon>AddBeneficiary.aspx</DependentUpon>
+    <Compile Include="ManageBeneficiary.aspx.cs">
+      <DependentUpon>ManageBeneficiary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddBeneficiary.aspx.designer.cs">
-      <DependentUpon>AddBeneficiary.aspx</DependentUpon>
+    <Compile Include="ManageBeneficiary.aspx.designer.cs">
+      <DependentUpon>ManageBeneficiary.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddExpense.aspx.cs">
       <DependentUpon>AddExpense.aspx</DependentUpon>
@@ -98,6 +101,16 @@
     </Compile>
     <Compile Include="AddExpense.aspx.designer.cs">
       <DependentUpon>AddExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="NewFolder1\Beneficiary.cs" />
     <Compile Include="NewFolder1\Category.cs" />
@@ -134,19 +147,19 @@
     <Compile Include="ViewPayments.aspx.designer.cs">
       <DependentUpon>ViewPayments.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddCategory.aspx.cs">
-      <DependentUpon>AddCategory.aspx</DependentUpon>
+    <Compile Include="ManageCategory.aspx.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddCategory.aspx.designer.cs">
-      <DependentUpon>AddCategory.aspx</DependentUpon>
+    <Compile Include="ManageCategory.aspx.designer.cs">
+      <DependentUpon>ManageCategory.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddPaymentMode.aspx.cs">
-      <DependentUpon>AddPaymentMode.aspx</DependentUpon>
+    <Compile Include="ManagePaymentMode.aspx.cs">
+      <DependentUpon>ManagePaymentMode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddPaymentMode.aspx.designer.cs">
-      <DependentUpon>AddPaymentMode.aspx</DependentUpon>
+    <Compile Include="ManagePaymentMode.aspx.designer.cs">
+      <DependentUpon>ManagePaymentMode.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

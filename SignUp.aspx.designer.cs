@@ -51,6 +51,15 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblFirstName;
 
         /// <summary>
+        /// ReqValFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValFirstName;
+
+        /// <summary>
         /// TxtFirstName control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace ExpenseTracker
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtFirstName;
+
+        /// <summary>
+        /// RegExpValFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpValFirstName;
 
         /// <summary>
         /// LblLastName control.
@@ -87,6 +105,15 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblEmail;
 
         /// <summary>
+        /// ReqValEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValEmail;
+
+        /// <summary>
         /// TxtEmail control.
         /// </summary>
         /// <remarks>
@@ -105,6 +132,15 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblPassword;
 
         /// <summary>
+        /// ReqValPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValPassword;
+
+        /// <summary>
         /// TxtPassword control.
         /// </summary>
         /// <remarks>
@@ -112,6 +148,15 @@ namespace ExpenseTracker
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtPassword;
+
+        /// <summary>
+        /// RegExpValPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpValPassword;
 
         /// <summary>
         /// LblMobileNo control.
@@ -130,15 +175,6 @@ namespace ExpenseTracker
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtMobileNo;
-
-        /// <summary>
-        /// LblError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblError;
 
         /// <summary>
         /// BtnSignUp control.

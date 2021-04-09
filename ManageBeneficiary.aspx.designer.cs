@@ -11,80 +11,80 @@ namespace ExpenseTracker
 {
 
 
-    public partial class SignIn
+    public partial class AddBeneficiary
     {
 
         /// <summary>
-        /// form1 control.
+        /// LblAddBeneficiary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label LblAddBeneficiary;
 
         /// <summary>
-        /// Label1 control.
+        /// LblBName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label LblBName;
 
         /// <summary>
-        /// LblUserId control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblUserId;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// ReqValUserId control.
+        /// TxtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValUserId;
+        protected global::System.Web.UI.WebControls.TextBox TxtName;
 
         /// <summary>
-        /// TxtUserId control.
+        /// RegExpValName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUserId;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpValName;
 
         /// <summary>
-        /// LblPassword control.
+        /// LblBMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPassword;
+        protected global::System.Web.UI.WebControls.Label LblBMobile;
 
         /// <summary>
-        /// ReqValPassword control.
+        /// TxtMobileNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValPassword;
+        protected global::System.Web.UI.WebControls.TextBox TxtMobileNo;
 
         /// <summary>
-        /// TxtPassword control.
+        /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPassword;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
 
         /// <summary>
         /// LblError control.
@@ -96,57 +96,48 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblError;
 
         /// <summary>
-        /// ValSummaryLogin control.
+        /// BtnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValSummaryLogin;
+        protected global::System.Web.UI.WebControls.Button BtnAdd;
 
         /// <summary>
-        /// BtnLogin control.
+        /// LblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLogin;
+        protected global::System.Web.UI.WebControls.Label LblMessage;
 
         /// <summary>
-        /// LblRememberMe control.
+        /// GridViewBeneficiaries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblRememberMe;
+        protected global::System.Web.UI.WebControls.GridView GridViewBeneficiaries;
 
         /// <summary>
-        /// ChkRememberMe control.
+        /// SqlDataBeneficiary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ChkRememberMe;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataBeneficiary;
 
         /// <summary>
-        /// Label2 control.
+        /// ValidationSummaryGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-
-        /// <summary>
-        /// LbSignUp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LbSignUp;
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummaryGrid;
     }
 }

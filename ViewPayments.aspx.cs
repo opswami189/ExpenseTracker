@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ExpenseTracker
 {
@@ -11,13 +7,13 @@ namespace ExpenseTracker
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Id"] == null)
+            HttpContext context = HttpContext.Current;
+            if (context != null && context.Session != null)
             {
-                Response.Redirect("SignIn.aspx", false);
-                
+                context.Session["Id"] = ((System.Web.Security.FormsIdentity)HttpContext.Current.User.Identity).Ticket.UserData;
+
             }
         }
-
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

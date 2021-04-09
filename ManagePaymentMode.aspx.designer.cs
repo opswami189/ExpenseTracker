@@ -11,53 +11,80 @@ namespace ExpenseTracker
 {
 
 
-    public partial class AddBeneficiary
+    public partial class WebForm2
     {
 
         /// <summary>
-        /// LblAddBeneficiary control.
+        /// LblAddPaymentMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAddBeneficiary;
+        protected global::System.Web.UI.WebControls.Label LblAddPaymentMode;
 
         /// <summary>
-        /// LblBName control.
+        /// LblMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblBName;
+        protected global::System.Web.UI.WebControls.Label LblMode;
 
         /// <summary>
-        /// TxtName control.
+        /// ReqValMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValMode;
 
         /// <summary>
-        /// LblBMobile control.
+        /// TxtMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblBMobile;
+        protected global::System.Web.UI.WebControls.TextBox TxtMode;
 
         /// <summary>
-        /// TxtMobileNo control.
+        /// RegExpValMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtMobileNo;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpValMode;
+
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+
+        /// <summary>
+        /// LblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblError;
+
+        /// <summary>
+        /// BtnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnAdd;
 
         /// <summary>
         /// LblMessage control.
@@ -69,30 +96,21 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblMessage;
 
         /// <summary>
-        /// BtnSave control.
+        /// GridViewModes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSave;
+        protected global::System.Web.UI.WebControls.GridView GridViewModes;
 
         /// <summary>
-        /// GridViewBeneficiaries control.
+        /// SqlDataPaymentMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewBeneficiaries;
-
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataPaymentMode;
     }
 }

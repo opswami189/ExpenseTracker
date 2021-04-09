@@ -1,10 +1,6 @@
 ﻿using ExpenseTracker.NewFolder1;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ExpenseTracker
 {
@@ -12,38 +8,69 @@ namespace ExpenseTracker
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Id"] == null)
+            HttpContext context = HttpContext.Current;
+            if (context != null && context.Session != null)
             {
-                Response.Redirect("Login.aspx", false);
+                context.Session["Id"] = ((System.Web.Security.FormsIdentity)HttpContext.Current.User.Identity).Ticket.UserData;
             }
         }
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
+            bool amountIsValid = true;
             using (var ctx = new PaymentContext())
             {
-                var payment = new Payment()
+                var payment = new Payment();
+                payment.TransactionDate = DateTime.Parse(TxtDate.Text);
+
+                payment.UserProfileId = Convert.ToInt32(((System.Web.Security.FormsIdentity)HttpContext.Current.User.Identity).Ticket.UserData);
+                try
                 {
-                    UserProfileId = Convert.ToInt32(Session["Id"]),
-                    TransactionDate = Convert.ToDateTime(TxtDate.Text),
-                    Amount = int.Parse(TxtAmount.Text),
-                    CategoryId = int.Parse(DropDownCategory.SelectedValue),
-                    IsCredit = CheckBoxIsCredit.Checked,
-                    BeneficiaryId = int.Parse(DropDownBeneficiary.SelectedValue),
-                    PaymentModeId = int.Parse(DropDownMode.SelectedValue),
-                    PaymentDetails = TxtDetails.Text
-                };
+                    payment.Amount = decimal.Parse(TxtAmount.Text);
+                }
+                catch
+                {
+                    amountIsValid = false;
+                }
+                
+                payment.CategoryId = int.Parse(DropDownCategory.SelectedValue);
 
-                ctx.Payments.Add(payment);
-                ctx.SaveChanges();
+                payment.IsCredit = CheckBoxIsCredit.Checked;
 
+                try
+                {
+                    payment.BeneficiaryId = int.Parse(DropDownBeneficiary.SelectedValue);
+                }
+                catch
+                {
+                    payment.BeneficiaryId = null;
+                }
+
+                payment.PaymentModeId = int.Parse(DropDownMode.SelectedValue);
+
+                payment.PaymentDetails = TxtDetails.Text;
+
+                if (amountIsValid)
+                {
+                    ctx.Payments.Add(payment);
+                    ctx.SaveChanges();
+                    TxtDate.Text = null;
+                    TxtAmount.Text = null;
+                    DropDownCategory.SelectedValue = null;
+                    CheckBoxIsCredit.Checked = false;
+                    DropDownBeneficiary.SelectedValue = null;
+                    TxtDetails.Text = null;
+                    LblError.Text = null;
+                    LblMessage.Text = "Payment Added";
+                }
+                else
+                {
+                    if (!amountIsValid)
+                    {
+                        LblError.Text = "Invalid Amount!";
+                    }
+                }
             }
-            TxtDetails.Text = null;
-        }
-
-        protected void TxtDate_TextChanged1(object sender, EventArgs e)
-        {
-
         }
     }
 }

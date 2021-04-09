@@ -33,6 +33,15 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Label LblName;
 
         /// <summary>
+        /// ReqValName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqValName;
+
+        /// <summary>
         /// TxtCategoryType control.
         /// </summary>
         /// <remarks>
@@ -42,13 +51,31 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.TextBox TxtCategoryType;
 
         /// <summary>
-        /// LblMessage control.
+        /// RegExpValCtgName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMessage;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpValCtgName;
+
+        /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+
+        /// <summary>
+        /// LblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblError;
 
         /// <summary>
         /// BtnAdd control.
@@ -60,6 +87,15 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.Button BtnAdd;
 
         /// <summary>
+        /// LblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblMessage;
+
+        /// <summary>
         /// GridViewCategories control.
         /// </summary>
         /// <remarks>
@@ -69,12 +105,12 @@ namespace ExpenseTracker
         protected global::System.Web.UI.WebControls.GridView GridViewCategories;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// SqlDataCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataCategory;
     }
 }
